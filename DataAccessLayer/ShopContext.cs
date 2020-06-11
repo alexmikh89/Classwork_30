@@ -7,6 +7,7 @@ namespace DataAccessLayer
     {
         public ShopContext() : base("DefaultConnection")
         {
+            Database.SetInitializer(new CustomInitialiser());
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Shop> Shops { get; set; }

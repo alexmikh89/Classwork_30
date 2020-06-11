@@ -2,9 +2,11 @@
 using DataAccessLayer.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace BuisnessLogic
 {
@@ -14,7 +16,7 @@ namespace BuisnessLogic
         {
             using (var dbCtx = new ShopContext())
             {
-                return dbCtx.Shops.ToList();
+                return dbCtx.Shops.Include(s => s.Suppliers.Select(y => y.Products)).ToList();
             }
         }
     }
