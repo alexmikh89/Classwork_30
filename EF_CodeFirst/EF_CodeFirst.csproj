@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomInitializer.cs" />
     <Compile Include="PersonContext.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
