@@ -10,6 +10,15 @@ namespace Classwork_30
     {
         static void Main(string[] args)
         {
+            using (var context= new HumanResourcesEntities())
+            {
+                foreach (var item in context.employees.ToList())                
+                {
+                    Console.WriteLine(item.last_name + ", "+ item.first_name);
+                }
+            }
+
+            Console.ReadKey();
         }
     }
 }

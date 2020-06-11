@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +52,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="countries.cs">
+      <DependentUpon>HRContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="departments.cs">
+      <DependentUpon>HRContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dependents.cs">
+      <DependentUpon>HRContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="employees.cs">
+      <DependentUpon>HRContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HRContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HRContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HRContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="jobs.cs">
+      <DependentUpon>HRContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="locations.cs">
+      <DependentUpon>HRContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="regions.cs">
+      <DependentUpon>HRContext.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="HRContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HRContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="HRContext.edmx.diagram">
+      <DependentUpon>HRContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HRContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HRContext.Context.cs</LastGenOutput>
+      <DependentUpon>HRContext.edmx</DependentUpon>
+    </Content>
+    <Content Include="HRContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HRContext.edmx</DependentUpon>
+      <LastGenOutput>HRContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
