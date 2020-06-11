@@ -8,7 +8,13 @@ namespace DataAccessLayer.Models
 {
     public class Shop
     {
+        public Shop()
+        {
+            Suppliers = new List<Supplier>();
+        }
         public int ID { get; set; }
         public string Name { get; set; }
+
+        public ICollection<Supplier> Suppliers{ get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ef_Code_first
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
