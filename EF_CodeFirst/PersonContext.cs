@@ -11,7 +11,7 @@ namespace EF_CodeFirst
     {
         public PersonContext() : base ("DefaultConnection")
         {
-
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PersonContext>());
         }
        public DbSet<Person> People { get; set; }
     }

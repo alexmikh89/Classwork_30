@@ -12,7 +12,7 @@ namespace EF_CodeFirst
         {
             using (var ctx = new PersonContext())
             {
-                ctx.People.Add(new Person() { Age = 20, Name = "oleksii" });
+                ctx.People.Add(new Person() { Age = 20, Name = "oleksii", Sex = "Male" });
                 ctx.SaveChanges();
             }
             Console.WriteLine("Ready");
