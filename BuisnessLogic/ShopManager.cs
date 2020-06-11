@@ -12,11 +12,19 @@ namespace BuisnessLogic
 {
     public class ShopManager
     {
-        public IList <Shop> GetShops()
+        public IList<Shop> GetShops()
         {
             using (var dbCtx = new ShopContext())
             {
                 return dbCtx.Shops.Include(s => s.Suppliers.Select(y => y.Products)).ToList();
+            }
+        }
+
+        public Shop GetFirstShop()
+        {
+            using (var dbCtx = new ShopContext())
+            {
+                return dbCtx.Shops.First();
             }
         }
     }

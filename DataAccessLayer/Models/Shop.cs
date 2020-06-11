@@ -15,6 +15,6 @@ namespace DataAccessLayer.Models
         public int ID { get; set; }
         public string Name { get; set; }
 
-        public ICollection<Supplier> Suppliers{ get; set; }
+        public virtual ICollection<Supplier> Suppliers{ get; set; }
     }
 }

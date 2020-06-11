@@ -16,23 +16,26 @@ namespace Ef_Code_first
 
             var shops = manager.GetShops();
 
-            foreach (var shop in shops)
-            {
-                Console.WriteLine($"Name: {shop.Name}");
-                foreach (var sup in shop.Suppliers)
-                {
-                    Console.WriteLine($"Supplier Name: {sup.Name}");
-                    foreach (var prod in sup.Products)
-                    {
-                        Console.WriteLine($"Product Name: {prod.Name}");
-                    }
-                }
+            //foreach (var shop in shops)
+            //{
+            //    Console.WriteLine($"Name: {shop.Name}");
+            //    foreach (var sup in shop.Suppliers)
+            //    {
+            //        Console.WriteLine($"Supplier Name: {sup.Name}");
+            //        foreach (var prod in sup.Products)
+            //        {
+            //            Console.WriteLine($"Product Name: {prod.Name}");
+            //        }
+            //    }
 
-            }
+            //}
 
             Console.WriteLine("----------------------------");
 
-            Console.ReadLine();
+            var sh = manager.GetFirstShop();
+
+
+            Console.ReadKey();
         }
     }
 }
