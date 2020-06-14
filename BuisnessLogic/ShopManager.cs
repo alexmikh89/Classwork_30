@@ -27,5 +27,6 @@ namespace BuisnessLogic
                 return dbCtx.Shops.First();
             }
         }
+
     }
 }

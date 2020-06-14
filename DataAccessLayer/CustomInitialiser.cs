@@ -19,7 +19,7 @@ namespace DataAccessLayer
             };
 
             var supplier = new Supplier() { Name = "Ivan", Products = products };
-            var shop = new Shop() { Name = "ATB" };
+            var shop = new Shop() { ShopName = "ATB" };
             shop.Suppliers.Add(supplier);
 
             context.Products.AddRange(products);

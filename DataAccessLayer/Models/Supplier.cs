@@ -12,7 +12,7 @@ namespace DataAccessLayer.Models
         public int ID { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection <Shop> Shops{ get; set; }
-        public virtual ICollection<Product> Products{ get; set; }
+        public virtual ICollection<Shop> Shops { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

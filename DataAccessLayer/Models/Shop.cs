@@ -13,7 +13,7 @@ namespace DataAccessLayer.Models
             Suppliers = new List<Supplier>();
         }
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string ShopName { get; set; }
 
         public virtual ICollection<Supplier> Suppliers{ get; set; }
     }
