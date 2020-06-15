@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 namespace DataAccessLayer
 {
     public class CustomInitialiser : 
-        DropCreateDatabaseIfModelChanges<ShopContext>
-        //CreateDatabaseIfNotExists<ShopContext>
+        //DropCreateDatabaseIfModelChanges<ShopContext>
+        CreateDatabaseIfNotExists<ShopContext>
         
     {
         protected override void Seed(ShopContext context)

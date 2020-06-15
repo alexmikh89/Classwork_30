@@ -61,6 +61,10 @@
     <Compile Include="Migrations\202006111901510_RenameShopName.designer.cs">
       <DependentUpon>202006111901510_RenameShopName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006151652027_editShopLength.cs" />
+    <Compile Include="Migrations\202006151652027_editShopLength.designer.cs">
+      <DependentUpon>202006151652027_editShopLength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Shop.cs" />
@@ -78,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006111901510_RenameShopName.resx">
       <DependentUpon>202006111901510_RenameShopName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006151652027_editShopLength.resx">
+      <DependentUpon>202006151652027_editShopLength.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
