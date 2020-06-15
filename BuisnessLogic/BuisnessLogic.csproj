@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelsDTO\ProductDTO.cs" />
+    <Compile Include="ModelsDTO\ShopDTO.cs" />
+    <Compile Include="ModelsDTO\SupplierDTO.cs" />
     <Compile Include="ShopManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
